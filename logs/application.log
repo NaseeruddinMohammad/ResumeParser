@@ -1,0 +1,943 @@
+2017-05-22 10:51:08,697 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 10:51:13,852 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 10:54:06,233 - [ERROR] - from play in play-internal-execution-context-3 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-05-22 10:54:06,249 - [ERROR] - from application in play-internal-execution-context-3 
+
+
+! @74515bm62 - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:89) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:60) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 12:20:47,041 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 12:20:52,176 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 12:22:51,162 - [ERROR] - from play in play-internal-execution-context-3 
+Cannot invoke the action, eventually got an error: java.io.FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/\conf\resources\GATEFiles\ANNIEResumeParser.gapp (No such file or directory)
+
+2017-05-22 12:22:51,176 - [ERROR] - from application in play-internal-execution-context-3 
+
+
+! @7451h2l8p - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/\conf\resources\GATEFiles\ANNIEResumeParser.gapp (No such file or directory)]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: java.io.FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/\conf\resources\GATEFiles\ANNIEResumeParser.gapp (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_131]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_131]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_131]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_131]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[na:1.8.0_131]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[na:1.8.0_131]
+	at java.net.URL.openStream(URL.java:1045) ~[na:1.8.0_131]
+	at gate.util.persistence.PersistenceManager.isXmlApplicationFile(PersistenceManager.java:1293) ~[gate-core-8.2.jar:na]
+	at gate.util.persistence.PersistenceManager.loadObjectFromUrl(PersistenceManager.java:1137) ~[gate-core-8.2.jar:na]
+	at gate.util.persistence.PersistenceManager.loadObjectFromFile(PersistenceManager.java:1111) ~[gate-core-8.2.jar:na]
+	at models.Annie.initAnnie(Annie.java:22) ~[classes/:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:92) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:60) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 12:25:26,465 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 12:25:31,582 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 14:21:51,291 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 14:21:56,445 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 14:29:31,699 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 14:29:36,798 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 14:55:16,029 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 14:55:21,188 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:18:20,702 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 15:18:25,844 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:35:53,955 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 15:35:59,182 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:39:31,442 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 15:39:36,556 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:43:11,725 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 15:43:16,858 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:55:12,508 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 15:55:17,626 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 15:57:01,243 - [ERROR] - from play in play-internal-execution-context-4 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-05-22 15:57:01,257 - [ERROR] - from application in play-internal-execution-context-4 
+
+
+! @7452j5o8n - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:89) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:60) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 16:01:53,655 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:01:58,776 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 16:07:55,640 - [ERROR] - from play in play-internal-execution-context-4 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-05-22 16:07:55,653 - [ERROR] - from application in play-internal-execution-context-4 
+
+
+! @7452kh4a0 - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:89) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:48) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 16:13:52,985 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:13:58,102 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 16:16:26,872 - [ERROR] - from play in play-internal-execution-context-4 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-05-22 16:16:26,985 - [ERROR] - from application in play-internal-execution-context-4 
+
+
+! @7452lk6kg - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:89) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:48) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 16:19:44,001 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:19:49,124 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 16:20:24,651 - [ERROR] - from play in play-internal-execution-context-3 
+Cannot invoke the action, eventually got an error: java.io.FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/conf/resources/GATEFiles/ßåANNIEResumeParser.gapp (No such file or directory)
+
+2017-05-22 16:20:24,665 - [ERROR] - from application in play-internal-execution-context-3 
+
+
+! @7452m7ka3 - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/conf/resources/GATEFiles/ßåANNIEResumeParser.gapp (No such file or directory)]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: java.io.FileNotFoundException: /Users/trainingip/ResumeParser/Tankbund/conf/resources/GATEFiles/ßåANNIEResumeParser.gapp (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_131]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_131]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_131]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_131]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[na:1.8.0_131]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[na:1.8.0_131]
+	at java.net.URL.openStream(URL.java:1045) ~[na:1.8.0_131]
+	at gate.util.persistence.PersistenceManager.isXmlApplicationFile(PersistenceManager.java:1293) ~[gate-core-8.2.jar:na]
+	at gate.util.persistence.PersistenceManager.loadObjectFromUrl(PersistenceManager.java:1137) ~[gate-core-8.2.jar:na]
+	at gate.util.persistence.PersistenceManager.loadObjectFromFile(PersistenceManager.java:1111) ~[gate-core-8.2.jar:na]
+	at models.Annie.initAnnie(Annie.java:19) ~[classes/:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:92) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:52) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:48) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-05-22 16:23:20,035 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:23:25,141 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 16:28:00,336 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:28:05,441 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-22 16:35:07,672 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-22 16:35:12,776 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-23 14:01:19,488 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-05-23 14:01:24,667 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-05-23 14:02:19 INFO  ResumeController:47 - Length25499
+2017-05-23 14:02:22 INFO  ResumeParser:82 - Initialising basic system...
+2017-05-23 14:02:22 INFO  Gate:284 - Using /Applications/GATE_Developer_8.4 as GATE home
+2017-05-23 14:02:22 INFO  Gate:308 - Using /Applications/GATE_Developer_8.4/plugins as installed plug-ins directory.
+2017-05-23 14:02:22 INFO  Gate:331 - Using /Applications/GATE_Developer_8.4/gate.xml as site configuration file.
+2017-05-23 14:02:22 INFO  Gate:343 - Using /Users/trainingip/.gate.xml as user configuration file
+2017-05-23 14:02:22 INFO  Gate:356 - Using /Users/trainingip/.gate.session as user session file
+2017-05-23 14:02:23 INFO  ResumeParser:84 - ...Basic System Initialised
+2017-05-23 14:02:23 INFO  Annie:19 - Initialising processing engine...
+2017-05-23 14:02:24 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/ANNIE/
+2017-05-23 14:02:24 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Keyphrase_Extraction_Algorithm/
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.queryParser.ParseException is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.store.Directory is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.store.FSDirectory is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.analysis.Analyzer is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.analysis.SimpleAnalyzer is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 WARN  GateClassLoader:187 - org.apache.lucene.document.Fieldable is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-05-23 14:02:24 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Information_Retrieval/
+2017-05-23 14:02:24 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Crowd_Sourcing/
+2017-05-23 14:02:24 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/DocumentNormalizer/
+2017-05-23 14:02:32 INFO  Annie:22 - ...processing engine loaded
+2017-05-23 14:02:32 INFO  ResumeParser:94 - Creating doc for file:/Users/trainingip/ResumeParser/Tankbund/nullresume_1495573339746.html
+2017-05-23 14:02:32 INFO  Annie:30 - Running processing engine...
+2017-05-23 14:02:35 INFO  Annie:32 - ...processing engine complete
+2017-05-23 14:02:35 INFO  ResumeParser:101 - Started parsing...
+2017-05-23 14:02:35 INFO  ResumeParser:202 - Completed parsing...
+2017-05-23 14:02:35 INFO  Utils:82 - Summary not found in the resume
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail url not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail date_end not found
+2017-05-23 14:02:35 INFO  Utils:113 - Work experience detail Projects not found
+2017-06-06 12:38:51,134 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-06 12:38:56,349 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-06 12:39:33 INFO  ResumeParser:82 - Initialising basic system...
+2017-06-06 12:39:33 WARN  Gate:253 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2017-06-06 12:39:33 WARN  Gate:273 - Using "/Users/trainingip/.m2/repository/uk/ac/gate/gate-core" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2017-06-06 12:39:33 INFO  Gate:284 - Using /Users/trainingip/.m2/repository/uk/ac/gate/gate-core as GATE home
+2017-06-06 12:39:33,121 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-06-06 12:39:33,137 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @7496l8j7j - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:83) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:46) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:47) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-06-07 02:23:36,938 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-07 02:23:42,092 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-07 02:23:48 INFO  ResumeParser:83 - Initialising basic system...
+2017-06-07 02:23:48 WARN  Gate:253 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2017-06-07 02:23:48 WARN  Gate:273 - Using "/Users/trainingip/.m2/repository/uk/ac/gate/gate-core" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2017-06-07 02:23:48 INFO  Gate:284 - Using /Users/trainingip/.m2/repository/uk/ac/gate/gate-core as GATE home
+2017-06-07 02:23:48 INFO  Gate:308 - Using null/plugins as installed plug-ins directory.
+2017-06-07 02:23:48,243 - [ERROR] - from play in play-internal-execution-context-2 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not locate the site configuration file!
+Please create it at /Users/trainingip/.m2/repository/uk/ac/gate/gate-core/gate.xml or point to an existing one using the -Dgate.site.config option in your start-up script!
+
+2017-06-07 02:23:48,260 - [ERROR] - from application in play-internal-execution-context-2 
+
+
+! @749apedjl - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not locate the site configuration file!
+Please create it at /Users/trainingip/.m2/repository/uk/ac/gate/gate-core/gate.xml or point to an existing one using the -Dgate.site.config option in your start-up script!]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not locate the site configuration file!
+Please create it at /Users/trainingip/.m2/repository/uk/ac/gate/gate-core/gate.xml or point to an existing one using the -Dgate.site.config option in your start-up script!
+	at gate.Gate.initLocalPaths(Gate.java:327) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:84) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:47) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:47) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-06-07 02:25:56,913 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-07 02:26:02,026 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-07 02:26:07 INFO  ResumeParser:83 - Initialising basic system...
+2017-06-07 02:26:07 WARN  Gate:253 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2017-06-07 02:26:07 WARN  Gate:273 - Using "/Users/trainingip/.m2/repository/uk/ac/gate/gate-core" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2017-06-07 02:26:07 INFO  Gate:284 - Using /Users/trainingip/.m2/repository/uk/ac/gate/gate-core as GATE home
+2017-06-07 02:26:07,488 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-06-07 02:26:07,499 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @749apmbj9 - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:84) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:47) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:47) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-06-07 02:29:36,678 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-07 02:29:41,814 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-07 02:29:52 INFO  ResumeParser:83 - Initialising basic system...
+2017-06-07 02:29:52 WARN  Gate:253 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2017-06-07 02:29:52 WARN  Gate:273 - Using "/Users/trainingip/.m2/repository/uk/ac/gate/gate-core" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2017-06-07 02:29:52 INFO  Gate:284 - Using /Users/trainingip/.m2/repository/uk/ac/gate/gate-core as GATE home
+2017-06-07 02:29:52,356 - [ERROR] - from play in play-internal-execution-context-2 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-06-07 02:29:52,366 - [ERROR] - from application in play-internal-execution-context-2 
+
+
+! @749b096a3 - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:84) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:47) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:47) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-06-07 02:44:37,163 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-07 02:44:42,294 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-07 02:44:51 INFO  ResumeParser:83 - Initialising basic system...
+2017-06-07 02:44:51 WARN  Gate:253 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2017-06-07 02:44:51 WARN  Gate:273 - Using "/Users/trainingip/.m2/repository/uk/ac/gate/gate-core" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2017-06-07 02:44:51 INFO  Gate:284 - Using /Users/trainingip/.m2/repository/uk/ac/gate/gate-core as GATE home
+2017-06-07 02:44:51,971 - [ERROR] - from play in play-internal-execution-context-4 
+Cannot invoke the action, eventually got an error: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+
+2017-06-07 02:44:51,984 - [ERROR] - from application in play-internal-execution-context-4 
+
+
+! @749b28b4j - Internal server error, for (POST) [/api/v1/resumes] ->
+
+play.api.Application$$anon$1: Execution exception[[GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.6.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.6.jar:na]
+Caused by: gate.util.GateRuntimeException: Could not infer installed plug-ins home!
+Please set it manually using the -Dgate.plugins.home option in your start-up script.
+	at gate.Gate.initLocalPaths(Gate.java:303) ~[gate-core-8.2.jar:na]
+	at gate.Gate.init(Gate.java:163) ~[gate-core-8.2.jar:na]
+	at models.ResumeParser.loadGateAndAnnie(ResumeParser.java:84) ~[classes/:na]
+	at models.ResumeParser.<init>(ResumeParser.java:47) ~[classes/:na]
+	at controllers.ResumeController.postResume(ResumeController.java:47) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(routes_routing.scala:57) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.6.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.6.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.6.jar:2.2.6]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2017-06-07 02:48:03,682 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-07 02:48:08,831 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-07 02:48:11 INFO  ResumeParser:84 - Initialising basic system...
+2017-06-07 02:48:11 INFO  Gate:284 - Using /Applications/GATE_Developer_8.4 as GATE home
+2017-06-07 02:48:11 INFO  Gate:308 - Using /Applications/GATE_Developer_8.4/plugins as installed plug-ins directory.
+2017-06-07 02:48:11 INFO  Gate:331 - Using /Applications/GATE_Developer_8.4/gate.xml as site configuration file.
+2017-06-07 02:48:11 INFO  Gate:343 - Using /Users/trainingip/.gate.xml as user configuration file
+2017-06-07 02:48:11 INFO  Gate:356 - Using /Users/trainingip/.gate.session as user session file
+2017-06-07 02:48:13 INFO  ResumeParser:86 - ...Basic System Initialised
+2017-06-07 02:48:13 INFO  Annie:19 - Initialising processing engine...
+2017-06-07 02:48:13 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/ANNIE/
+2017-06-07 02:48:13 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Keyphrase_Extraction_Algorithm/
+2017-06-07 02:48:13 WARN  GateClassLoader:187 - org.apache.lucene.queryParser.ParseException is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:13 WARN  GateClassLoader:187 - org.apache.lucene.store.Directory is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:13 WARN  GateClassLoader:187 - org.apache.lucene.store.FSDirectory is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:13 WARN  GateClassLoader:187 - org.apache.lucene.analysis.Analyzer is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:14 WARN  GateClassLoader:187 - org.apache.lucene.analysis.SimpleAnalyzer is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:14 WARN  GateClassLoader:187 - org.apache.lucene.document.Fieldable is available via both the system classpath and a plugin; the plugin classes will be ignored
+2017-06-07 02:48:14 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Information_Retrieval/
+2017-06-07 02:48:14 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/Crowd_Sourcing/
+2017-06-07 02:48:14 INFO  CreoleRegisterImpl:295 - CREOLE plugin loaded: file:/Applications/GATE_Developer_8.4/plugins/DocumentNormalizer/
+2017-06-07 02:48:20 INFO  Annie:22 - ...processing engine loaded
+2017-06-07 02:48:20 INFO  ResumeParser:96 - Creating doc for file:/Users/trainingip/Tankbund/nullresume_1496828890161.html
+2017-06-07 02:48:20 INFO  Annie:30 - Running processing engine...
+2017-06-07 02:48:22 INFO  Annie:32 - ...processing engine complete
+2017-06-07 02:48:22 INFO  ResumeParser:103 - Started parsing...
+2017-06-07 02:48:22 INFO  ResumeParser:204 - Completed parsing...
+2017-06-07 02:48:22 INFO  Utils:82 - Summary not found in the resume
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail url not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail date_end not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail Projects not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail url not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail Projects not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail url not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail date_end not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail Projects not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail jobtitle not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail url not found
+2017-06-07 02:48:22 INFO  Utils:113 - Work experience detail Projects not found
+2017-06-21 23:06:56,605 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:06:56,744 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-21 23:20:27,351 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:20:55,316 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:23:34,230 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:24:35,029 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:24:35,125 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2017-06-21 23:34:41,830 - [INFO] - from play in main 
+Application started (Prod)
+
+2017-06-21 23:34:41,960 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
